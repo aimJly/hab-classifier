@@ -1,0 +1,11 @@
+numpy>=1.26
+pandas>=2.2
+Pillow>=10.3
+tifffile>=2024.8.30
+scikit-learn>=1.5
+matplotlib>=3.8
+seaborn>=0.13
+joblib>=1.4
+pytest>=8.0
+datasets>=2.20.0
+huggingface_hub>=0.23.0

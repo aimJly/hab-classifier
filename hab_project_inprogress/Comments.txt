@@ -1,0 +1,32 @@
+The starter code contains the entire hugging face dataset. Most of this git repo is making sure the data can be accessed locally on a laptop. 
+
+The folder in hab-classifier\hab_project_inprogress\tmp_hf_dataset\data shows all places where HAB satellite image data was collected in different regions. 
+Each file contains metadata, for the location, weather, and high/medium/low counts which should be the severity level of HABs.
+
+Currently there is some issues with training the model because of 
+1) importing library errors 
+2) entire dataset takes long time to download 
+3) issues with creating the labels on each image (ex: B0_4.tif, B0_8.tif, etc..) to only just focus on severity level (high, medium, low)
+
+If you try running this project in train.py, only runs properly using a command. Not a good idea to run/redownload the entire hugging face dataset.
+
+The exact command to run train.py might be different on your coding environment. I used visual studio. 
+
+Command for accessing 5 samples of the hugging face dataset:
+"C:/Users/mly72/AppData/Local/Microsoft/WindowsApps/python3.11.exe -m hab_pipeline.train --dataset-name "kostaspic/amfitrite-inland-waters-hab-sentinel2" --limit 5"
+"
+
+
+The code for random forest should work okay.  And accessing the data shouldn't be too difficult. A challenge is training the model. Some parts of the data_loader.py code might  unnecessary.
+
+What to add: 
+1) further training the model
+2) computer vision
+3) data visualizations
+4) good way to display multiple images in a chronological way to show HAB growth overtime
+5) Fixing any coding errors
+6) Downloading/integrating the NOAA HABSOS dataset. Then aligning the data with hugging face dataset
+
+If you have questions, ask me on discord, read the comments in each of the Hab_pipeline folder and test_pipeline.py. 
+
+One last thing. The inspect_hf_dataset is a experimenting on brightening images (ex: B0_8.tif) to show the HAB shape more on a separate window from visual studio.
